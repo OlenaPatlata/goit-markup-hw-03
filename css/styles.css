@@ -20,9 +20,23 @@ body {
 /* Logo */
 .page-header {
   background-color: var(--additional-accent-color);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
 }
-.container {
+.container.header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo {
   font-family: Raleway, Sans Serif;
@@ -30,6 +44,7 @@ body {
   font-size: 26px;
   line-height: 1.2;
   text-decoration: none;
+  margin-right: 93px;
 }
 .first-word {
   color: var(--accent-color);
@@ -42,7 +57,15 @@ body {
 }
 nav .list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
+.item[href='./portfolio.html'] {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 nav .item {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -58,8 +81,16 @@ nav .item:hover,
 nav .item:focus {
   color: var(--accent-color);
 }
+.container.nav .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .list-contact {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .list-contact .item {
   color: var(--additional-text-color);
@@ -73,7 +104,20 @@ nav .item:focus {
 .list-contact .item:focus {
   color: var(--accent-color);
 }
+.item[href='mailto:info@devstudio.com'] {
+  margin-right: 50px;
+}
 /* Hero */
+.hero {
+  background-color: var(--futer-background-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
 .hero-title {
   color: var(--additional-accent-color);
   font-weight: 900;
@@ -85,10 +129,8 @@ nav .item:focus {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
-}
-.hero {
-  background-color: var(--futer-background-color);
-  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .hero button {
   font-family: Roboto, Sans Serif;
@@ -99,19 +141,41 @@ nav .item:focus {
   line-height: 1.9;
   letter-spacing: 0.06em;
   cursor: pointer;
-  padding: 10px 32px;
+  padding: 10px 31px;
+  border: 1px solid transparent;
   border-radius: 4px;
+  min-width: 200px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
 }
 /* section features */
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .feature-title {
   font-weight: 700;
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.features-title.hidden {
+  /* visibility: hidden; */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .list-features {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 .features p {
   font-weight: 400;
@@ -119,30 +183,69 @@ nav .item:focus {
   font-size: 14px;
   line-height: 1.71;
 }
+.container .list-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.list-features li {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 /* directions */
 .directions-title {
   color: var(--primary-text-color);
   font-size: 36px;
   line-height: 1.17;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
 }
-.directions .list {
+.directions .list-directions {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.container .list-directions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.directions {
+  padding-bottom: 94px;
 }
 /* team */
 .team {
   background-color: var(--additional-background-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .team-title {
   color: var(--primary-text-color);
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 .team .cards {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .card {
   background-color: var(--additional-accent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team .name {
   color: var(--primary-text-color);
@@ -150,6 +253,8 @@ nav .item:focus {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 .team .position {
   font-weight: 400;
@@ -157,6 +262,22 @@ nav .item:focus {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: block;
+}
+.container .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.card img {
+  margin-bottom: 30px;
 }
 /* footer */
 footer {
