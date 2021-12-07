@@ -33,18 +33,18 @@ body {
   margin-right: auto;
   outline: 2px solid tomato;
 }
-.container.header {
+.header > .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-}
-.header-list-nav.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  outline: 2px solid tomato;
 }
 .header-logo {
   font-family: 'Raleway', 'Sans Serif';
@@ -62,49 +62,38 @@ body {
 .third-word {
   color: var(--additional-accent-color);
 }
+.header-nav > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .header-item + .header-item {
   margin-left: 50px;
 }
-
 .header-link {
-  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-nav .active {
+.header-nav .header-link {
+  color: inherit;
+}
+.header .header-link:hover,
+.header .header-link:focus,
+.header .active {
   color: var(--accent-color);
 }
-nav .header-link:hover,
-nav .header-link:focus {
-  color: var(--accent-color);
-}
-.container.nav .list {
+.header-list-contact.container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.list-contact {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: auto;
 }
 .header-list-contact .header-link {
   color: var(--additional-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
-.header-list-contact .header-link:hover,
-.header-list-contact .header-link:focus {
-  color: var(--accent-color);
-}
-.item[href='mailto:info@devstudio.com'] {
-  margin-right: 50px;
-}
+
 /* Hero */
 .hero {
   background-color: var(--futer-background-color);
@@ -161,13 +150,23 @@ nav .header-link:focus {
   margin-top: 0;
   margin-bottom: 10px;
 }
-.features-title.hidden {
+/* .features-title.hidden {
   /* visibility: hidden; */
-  margin-top: 0;
+/* margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: center; */
+/* } */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 .list-features {
   list-style: none;
