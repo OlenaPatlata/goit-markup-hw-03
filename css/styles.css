@@ -11,14 +11,22 @@
 }
 /* body */
 body {
-  font-family: Roboto, Sans Serif;
+  font-family: 'Roboto', 'Sans Serif';
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
 }
 
 /* Nav */
 /* Logo */
-.page-header {
+.header {
   background-color: var(--additional-accent-color);
   max-width: 1600px;
   margin-left: auto;
@@ -33,17 +41,16 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-.container.nav {
+.header-list-nav.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo {
-  font-family: Raleway, Sans Serif;
+.header-logo {
+  font-family: 'Raleway', 'Sans Serif';
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
   margin-right: 93px;
 }
 .first-word {
@@ -55,30 +62,22 @@ body {
 .third-word {
   color: var(--additional-accent-color);
 }
-nav .list {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-.item[href='./portfolio.html'] {
+.header-item + .header-item {
   margin-left: 50px;
-  margin-right: 50px;
 }
 
-nav .item {
+.header-link {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 nav .active {
   color: var(--accent-color);
 }
-nav .item:hover,
-nav .item:focus {
+nav .header-link:hover,
+nav .header-link:focus {
   color: var(--accent-color);
 }
 .container.nav .list {
@@ -92,16 +91,15 @@ nav .item:focus {
   justify-content: center;
   align-items: center;
 }
-.list-contact .item {
+.header-list-contact .header-link {
   color: var(--additional-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
-.list-contact .item:hover,
-.list-contact .item:focus {
+.header-list-contact .header-link:hover,
+.header-list-contact .header-link:focus {
   color: var(--accent-color);
 }
 .item[href='mailto:info@devstudio.com'] {
