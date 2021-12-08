@@ -51,6 +51,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+  display: block;
   margin-right: 93px;
 }
 .first-word {
@@ -75,6 +76,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: block;
 }
 .header-nav .header-link {
   color: inherit;
@@ -133,7 +135,8 @@ body {
   border-radius: 4px;
   min-width: 200px;
   height: 50px;
-  display: block;
+  display: inline-block;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -153,7 +156,6 @@ body {
   clip: rect(0 0 0 0);
 }
 .feature-title {
-  font-weight: 700;
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.14;
@@ -174,6 +176,8 @@ body {
   color: var(--additional-text-color);
   font-size: 14px;
   line-height: 1.71;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .feature-item {
   padding-left: 15px;
