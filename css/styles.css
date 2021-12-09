@@ -16,7 +16,6 @@ body {
   font-family: 'Roboto', 'Sans Serif';
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  background-color: var(--primary-background-color);
 }
 p,
 h1,
@@ -57,16 +56,16 @@ img {
 /* ------------------HEDER------------------ */
 .header {
   background-color: var(--additional-accent-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .header.section {
-  border: 1px solid var(--border-line-heder);
+  border-bottom: 1px solid var(--border-line-heder);
 }
 .header > .container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .header-logo {
   font-family: 'Raleway', 'Sans Serif';
@@ -191,7 +190,7 @@ img {
   width: 270px;
 }
 .feature-item:not(:last-child) {
-  padding-right: 30px;
+  margin-right: 30px;
 }
 /* ---------------SECTION DIRECTIONS----------------- */
 .directions {
@@ -267,8 +266,6 @@ img {
 /* ---------------FOOTER----------------- */
 .footer {
   background-color: var(--futer-background-color);
-}
-.footer > .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -303,7 +300,6 @@ img {
 /* ---------------PAGE PORTFOLIO----------------- */
 /* ---------------SECTION PORTFOLIO----------------- */
 .portfolio.section {
-  background-color: var(--primary-background-color);
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -350,6 +346,7 @@ img {
 .project-item {
   width: 370px;
   margin: 15px;
+  border-bottom: 1px solid var(--border-portfolio);
 }
 .project-name {
   font-size: 18px;
