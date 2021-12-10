@@ -346,7 +346,6 @@ img {
 .project-item {
   width: 370px;
   margin: 15px;
-  border-bottom: 1px solid var(--border-portfolio);
 }
 .project-name {
   font-size: 18px;
@@ -372,4 +371,6 @@ img {
 }
 .project-description {
   padding: 20px 24px;
+  border: 1px solid var(--border-portfolio);
+  border-top: none;
 }
